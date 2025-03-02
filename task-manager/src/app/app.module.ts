@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { TaskListComponent } from './task-list/task-list.component';  // Add this import
-import { TaskFormComponent } from './task-form/task-form.component';  // Add this import
-import { TaskDetailComponent } from './task-detail/task-detail.component';  // Add this import
-import { AppRoutingModule } from './app-routing.module';
+import { AddTaskComponent } from './add-task/add-task.component';  // Import AddTaskComponent
+import { TaskListComponent } from './task-list/task-list.component';  // Import TaskListComponent
+import { TaskItemComponent } from './task-item/task-item.component';  // Import TaskItemComponent
+import { FormsModule } from '@angular/forms';  // Import FormsModule if using ngModel
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskListComponent,  // Declare TaskListComponent
-    TaskFormComponent,  // Declare TaskFormComponent
-    TaskDetailComponent  // Declare TaskDetailComponent
+    AddTaskComponent,   // Declare AddTaskComponent here
+    TaskListComponent,  // Declare TaskListComponent here
+    TaskItemComponent   // Declare TaskItemComponent here
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule  // Import the routing module here
+    FormsModule         // Import FormsModule for ngModel binding
   ],
   providers: [],
   bootstrap: [AppComponent]

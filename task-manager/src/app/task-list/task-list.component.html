@@ -1,8 +1,7 @@
-<p>task-list works!</p>
-
 <div *ngFor="let task of tasks">
-    <h3>{{ task.title }}</h3>
-    <p>{{ task.description }}</p>
-    <p>Due Date: {{ task.dueDate }} | Priority: {{ task.priority }} | Status: {{ task.status }}</p>
-  </div>
-  
+  <app-task-item 
+    [task]="task" 
+    (delete)="deleteTask(task.id)" 
+    (toggleCompletion)="toggleCompletion(task.id)">
+  </app-task-item>
+</div>

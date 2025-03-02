@@ -1,0 +1,8 @@
+<div>
+  <h3 [class.completed]="task.completed">{{ task.title }}</h3>
+  <p>{{ task.description }}</p>
+  <button (click)="onToggleCompletion()">
+    {{ task.completed ? 'Undo' : 'Complete' }}
+  </button>
+  <button (click)="onDelete()">Delete</button>
+</div>

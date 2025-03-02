@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* Example of app.component.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+.task-manager {
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}

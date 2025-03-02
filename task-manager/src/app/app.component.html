@@ -6,6 +6,21 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- app.component.html -->
+<div class="container">
+  <header>
+    <h1>Task Manager</h1>
+  </header>
+  
+  <section class="task-manager">
+    <!-- Component to add new tasks -->
+    <app-add-task></app-add-task>
+    
+    <!-- Component to display the list of tasks -->
+    <app-task-list></app-task-list>
+  </section>
+</div>
+
 
 <style>
   :host {

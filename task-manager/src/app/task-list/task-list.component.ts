@@ -1,15 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../task.service';
+import { Task } from '../task.model';
 
 @Component({
   selector: 'app-task-list',
-  imports: [],
   templateUrl: './task-list.component.html',
-  styleUrl: './task-list.component.css'
+  styleUrls: ['./task-list.component.css']
 })
-export class TaskListComponent {
-  tasks = [
-    { id: 1, title: 'Task 1', description: 'Description 1', dueDate: '2025-03-10', priority: 'High', status: 'To Do' },
-    { id: 2, title: 'Task 2', description: 'Description 2', dueDate: '2025-03-12', priority: 'Medium', status: 'In Progress' }
-  ];
+export class TaskListComponent implements OnInit {
+  tasks: Task[] = [];
 
+  constructor(private taskService: TaskService) { }
+
+  ngOnInit(): void {
+    this.tasks = this.taskService.getTasks();
+  }
+
+  deleteTask(id: number): void {
+    this.taskService.deleteTask(id);
+    this.tasks = this.taskService.getTasks();
+  }
+
+  toggleCompletion(id: number): void {
+    this.taskService.toggleTaskCompletion(id);
+    this.tasks = this.taskService.getTasks();
+  }
 }
