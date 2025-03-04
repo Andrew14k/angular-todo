@@ -1,5 +1,5 @@
-# TaskManager
-
+# TaskManager - Angular
+Below is the information which is produced by default when initially building an angular application. This application is a functional task manager application in which tasks listed are locally stored after terminating running the application. Next stage is to replace the LocalStorage with a functional backedn, producing a full stack application.
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 
 ## Development server
@@ -52,8 +52,4 @@ For end-to-end (e2e) testing, run:
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
